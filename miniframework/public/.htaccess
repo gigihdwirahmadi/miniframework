@@ -1,0 +1,9 @@
+
+# disable directory browsing
+Options All -Indexes
+
+RewriteEngine On
+RewriteCond %(REQUEST_FILENAME) l-f
+RewriteCond %(REQUEST_FILENAME) l-d
+RewriteRule ^([\s\S]*)$1 [L,NC,QSA]
+
